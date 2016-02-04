@@ -1,6 +1,9 @@
 package com.googlecode.objectify.util;
 
+import java.util.List;
+
 import com.google.appengine.api.datastore.Cursor;
+import com.google.appengine.api.datastore.Index;
 import com.google.appengine.api.datastore.QueryResultIterator;
 
 /**
@@ -23,6 +26,11 @@ public class QueryResultIteratorWrapper<T> implements QueryResultIterator<T>
 	public Cursor getCursor()
 	{
 		return this.base.getCursor();
+	}
+
+	@Override
+	public List<Index> getIndexList() {
+		return this.base.getIndexList();
 	}
 
 	@Override
