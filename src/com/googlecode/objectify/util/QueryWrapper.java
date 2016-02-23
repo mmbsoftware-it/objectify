@@ -29,7 +29,8 @@ public class QueryWrapper<T> implements Query<T>
 	@Override
 	public Query<T> filter(String condition, Object value)
 	{
-		return this.base.filter(condition, value);
+		this.base.filter(condition, value);
+		return this;
 	}
 	
 	@Override
