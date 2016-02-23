@@ -35,37 +35,43 @@ public class QueryWrapper<T> implements Query<T>
 	@Override
 	public Query<T> order(String condition)
 	{
-		return this.base.order(condition);
+		this.base.order(condition);
+		return this;
 	}
 	
 	@Override
 	public Query<T> ancestor(Object keyOrEntity)
 	{
-		return this.base.ancestor(keyOrEntity);
+		this.base.ancestor(keyOrEntity);
+		return this;
 	}
 	
 	@Override
 	public Query<T> limit(int value)
 	{
-		return this.base.limit(value);
+		this.base.limit(value);
+		return this;
 	}
 	
 	@Override
 	public Query<T> offset(int value)
 	{
-		return this.base.offset(value);
+		this.base.offset(value);
+		return this;
 	}
 
 	@Override
 	public Query<T> startCursor(Cursor value)
 	{
-		return this.base.startCursor(value);
+		this.base.startCursor(value);
+		return this;
 	}
 
 	@Override
 	public Query<T> endCursor(Cursor value)
 	{
-		return this.base.endCursor(value);
+		this.base.endCursor(value);
+		return this;
 	}
 
 	@Override
@@ -143,12 +149,14 @@ public class QueryWrapper<T> implements Query<T>
 	@Override
 	public Query<T> chunkSize(int value)
 	{
-		return this.base.chunkSize(value);
+		this.base.chunkSize(value);
+		return this;
 	}
 
 	@Override
 	public Query<T> prefetchSize(int value)
 	{
-		return this.base.prefetchSize(value);
+		this.base.prefetchSize(value);
+		return this;
 	}
 }
